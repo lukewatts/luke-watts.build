@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="astro-ZIHNQEKG">
+<head>
+	<!-- Global Metadata -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+	
+	<!-- Primary Meta Tags -->
+	<title>Luke Watts - Senior Software Engineer | Ditching Astro</title>
+	<meta name="title" content="Luke Watts - Senior Software Engineer | Ditching Astro...for now">
+	<meta name="description" content="Blog and portfolio of Luke Watts, a senior software engineer from Ireland.">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://luke-watts.com/blog/ditching-astro/">
+	<meta property="og:title" content="Luke Watts - Senior Software Engineer | Ditching Astro...for now">
+	<meta property="og:description" content="Blog and portfolio of Luke Watts, a senior software engineer from Ireland.">
+	<meta property="og:image" content="https://luke-watts.com/placeholder-social.jpg">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://luke-watts.com/blog/ditching-astro/">
+	<meta property="twitter:title" content="Luke Watts - Senior Software Engineer | Ditching Astro...for now">
+	<meta property="twitter:description" content="Blog and portfolio of Luke Watts, a senior software engineer from Ireland.">
+	<meta property="twitter:image" content="https://luke-watts.com/placeholder-social.jpg">
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-NRBP72VGVS"></script>
+
+	<!-- STYLES -->
+	<link rel="stylesheet" href="/assets/f89822ae.0d6f6118.css" />
+	<link rel="stylesheet" href="/assets/c7e049d5.d04c2e37.css" />
+	
+	<!-- SCRIPTS -->
+	<script type="module">window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a("js",new Date);a("config","G-NRBP72VGVS");</script>
+</head>
+<body class="astro-ZIHNQEKG">
+	<header class="astro-VWHTT25K">
+		<h2 class="astro-VWHTT25K">Luke Watts - Senior Software Engineer</h2>
+		<h3 class="astro-VWHTT25K">A blog about web development and web design.</h3>
+		<nav class="astro-VWHTT25K">
+			<a href="/" class="astro-VWHTT25K astro-KWAAWCVX">Home</a>
+			<a href="/blog" class="astro-VWHTT25K astro-KWAAWCVX">Blog</a>
+			<a href="/about" class="astro-VWHTT25K astro-KWAAWCVX">About</a>
+			<a href="https://github.com/lukewatts/" class="astro-VWHTT25K astro-KWAAWCVX" target="_blank">GitHub</a>
+			<a href="https://www.behance.net/lukewatts/" class="astro-VWHTT25K astro-KWAAWCVX" target="_blank">Behance</a>
+			<a href="https://soundcloud.com/lukewatts85/" class="astro-VWHTT25K astro-KWAAWCVX" target="_blank">Soundcloud</a>
+		</nav>
+	</header>
+	<main class="astro-ZIHNQEKG">
+		<article class="astro-ZIHNQEKG">
+			<img width="720" height="360" src="/images/ditching-astro.jpg" alt="" class="astro-ZIHNQEKG">
+			<h1 class="title astro-ZIHNQEKG">Ditching Astro...for now</h1>
+			<time class="astro-ZIHNQEKG">Sep 5th 2022</time>
+				
+			<hr class="astro-ZIHNQEKG">
+
+			<p><strong>UPDATE: Sep 12th 2022:</strong> As of today the Astro team have deployed a fix! So I'll get started on the new Astro build soon hopefully</p>
+
+			<p>In my first post I mentioned I had used Astro to generate the static pages for this site. All was quite going well, initially, and I actually (still) really like Astro. However, that was back in v1.1.3 (or something), and there were still a few quirks around using Tailwind which meant I ended up ditching the Astro build step and just continuing with the static files.</p>
+
+			<h2>What went wrong?</h2>
+			<p>Essentially, when I create a <code>global.css</code> with my base Tailwind styles...</p> 
+			
+			<pre>@tailwind base;
+@tailwind components;
+@tailwind utilities;</pre>
+
+			<p>They would work fine on the development build, but once a production build would happen the global.css would end up second or last in the order inserted into the head.</p>
+			<p>At this time, I'm unable to get around it, so I've just had to revert to using the static build and fixing the order manually and continuing with the static files.</p>
+			<p>Hopefully this will be fixed in a future version of Astro, and I can go back to using it.</p>
+			<p>I've logged it with the Astro team as a bug so you can read more about the issue there: <a href="https://github.com/withastro/astro/issues/4614">Issue #4614</a></p>
+			<p>Once it get's fixed I'll most likely resume using Astro once I have time to update it</p>
+		</article>
+	</main>
+	<footer class="astro-UPRRZDI3">&copy; 2022 - 2023 Luke Watts. All rights reserved.</footer>
+</body>
+</html>
